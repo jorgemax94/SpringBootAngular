@@ -1,0 +1,18 @@
+<div class="margem">
+    <mat-card color="primary">
+        <mat-card-subtitle>Consulta de exames de mamografia - Relação de Regiões</mat-card-subtitle>
+        <table matSort matSort (matSortChange)="regioes">
+            <tr>
+            <th mat-sort-header="id">ID</th>
+            <th mat-sort-header="regiao">Região</th>
+            <th mat-sort-header="total_exames">Total de Exames</th>
+            </tr>
+        
+            <tr *ngFor="let regiao of regioes">
+            <td>{{regiao.id}}</td>
+            <td>{{regiao.regiao}}</td>
+            <td>{{regiao.total_exames}}</td>
+            </tr>
+        </table>
+    </mat-card>
+</div>
