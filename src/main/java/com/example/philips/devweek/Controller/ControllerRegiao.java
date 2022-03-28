@@ -26,7 +26,6 @@ public class ControllerRegiao {
     public ResponseEntity<?> findAllRegioes(){
         try {
             List<Regiao> allRegioes = repository.findAll();
-            System.out.println("Achou");
             if (allRegioes.isEmpty())
                 System.out.println("Vazia");
             return new ResponseEntity<>(allRegioes, HttpStatus.OK);

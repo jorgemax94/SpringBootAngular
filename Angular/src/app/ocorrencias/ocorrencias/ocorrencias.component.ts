@@ -5,7 +5,10 @@ import { RegiaoService } from '../service/regiao.service';
 @Component({
   selector: 'app-ocorrencias',
   templateUrl: './ocorrencias.component.html',
-  styleUrls: ['./ocorrencias.component.css']
+  styleUrls: ['./ocorrencias.component.css'],
+  animations: [
+    
+  ]
 })
 export class OcorrenciasComponent implements OnInit {
 
@@ -14,7 +17,7 @@ export class OcorrenciasComponent implements OnInit {
   constructor(private regiaoService:RegiaoService) { }
 
   ngOnInit(): void {
-    this.regioes = this.regiaoService.listRegioes();
+    this.regiaoService.listRegioes().subscribe(regioes => this.regioes = regioes);
 
   }
 

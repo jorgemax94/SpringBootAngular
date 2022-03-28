@@ -29,11 +29,11 @@ public class Regiao {
         this.regiao = regiao;
     }
 
-    public Integer getTotal() {
+    public Integer getTotal_exames() {
         return total_exames;
     }
 
-    public void setTotal(Integer total) {
+    public void setTotal_exames(Integer total) {
         this.total_exames = total;
     }
 }
